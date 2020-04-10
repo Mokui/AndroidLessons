@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="taille_btn">56dp</dimen>
+    <dimen name="padding_txt">10dp</dimen>
+    <dimen name="taille_txt">18sp</dimen>
+</resources>

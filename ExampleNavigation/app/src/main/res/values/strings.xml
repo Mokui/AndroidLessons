@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExampleNavigation</string>
+    <string name="decompte">Créer un décompte</string>
+    <string name="res_decompte">Nombre en secondes</string>
+    <string name="value_sec">0</string>
+    <string name="lanceDecompte">Lancer décompte</string>
+    <string name="title">Intents Seconds Minuteur</string>
+    <string name="send_decompte">Envoyer le décompte</string>
+    <string name="send_to">Envoyer vers</string>
+</resources>

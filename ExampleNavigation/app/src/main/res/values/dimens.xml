@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="taille_txt">24sp</dimen>
+    <dimen name="marge_ptit">10dp</dimen>
+    <dimen name="mini_t">10sp</dimen>
+</resources>

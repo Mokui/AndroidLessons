@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:gravity="center"
+        android:layout_width="@dimen/taille_cote"
+        android:layout_height="@dimen/taille_cote"
+        android:text="@string/x"
+        android:layout_margin="@dimen/taille_marge"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/taillenum" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:layout_width="@dimen/taille_cote"
+        android:layout_height="@dimen/taille_cote"
+        android:text="@string/x"
+        android:layout_margin="@dimen/taille_marge"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/taillenum" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:gravity="center"
+        android:layout_width="@dimen/taille_cote"
+        android:layout_height="@dimen/taille_cote"
+        android:text="@string/x"
+        android:layout_margin="@dimen/taille_marge"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/taillenum" />
+
+</LinearLayout>

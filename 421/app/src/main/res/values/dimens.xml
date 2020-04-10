@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="taillenum">48sp</dimen>
+    <dimen name="taille_cote">80dp</dimen>
+    <dimen name="taille_marge">8dp</dimen>
+</resources>
