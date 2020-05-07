@@ -1,0 +1,2 @@
+rootProject.name='NotifApp'
+include ':app'
