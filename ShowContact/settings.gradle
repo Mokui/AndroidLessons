@@ -1,0 +1,2 @@
+rootProject.name='ShowContact'
+include ':app'
