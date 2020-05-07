@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Apparaît comme icône dans l'action bar s'il y a de la place -->
+    <item
+        android:id="@+id/action_reglages"
+        android:title="@string/activer_sous_titre"
+        android:icon="@drawable/ic_truc"
+        app:showAsAction="ifRoom"/>
+</menu>

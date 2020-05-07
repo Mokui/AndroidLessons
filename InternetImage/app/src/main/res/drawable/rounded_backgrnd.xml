@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:color="@color/bckgd_txt" />
+    <solid android:color="@color/bckgd_txt" />
+    <padding
+        android:bottom="@dimen/marge_padd"
+        android:top="@dimen/marge_padd" />
+    <corners
+        android:topLeftRadius="@dimen/marge_round"
+        android:bottomRightRadius="@dimen/marge_round" />
+</shape>
