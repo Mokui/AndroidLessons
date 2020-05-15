@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     public class MyBroadcastReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.d(TAG,"INCROYABLE");
             myMsg.setText(intent.getStringExtra("mymsg"));
         }
     }
@@ -49,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessagetoWeb(View view) {
-        Intent intent = new Intent(this, MyBroadcastReceiver.class);
-        intent.putExtra("mymsg", msgToSend.getText());
+        Intent intent = new Intent();
+        intent.putExtra("mymsg", msgToSend.getText().toString());
         intent.setAction(INTENT_FILTER);
         msgToSend.setText("");
         sendBroadcast(intent);
