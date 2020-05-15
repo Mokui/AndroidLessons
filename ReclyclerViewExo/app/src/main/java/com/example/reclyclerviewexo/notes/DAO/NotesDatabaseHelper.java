@@ -26,7 +26,7 @@ public class NotesDatabaseHelper
      */
 
     // Constructeur :
-    private NotesDatabaseHelper(Context context)
+    public NotesDatabaseHelper(Context context)
     {
         database = Room
                 .databaseBuilder(context, NotesDatabase.class, "notes.db")

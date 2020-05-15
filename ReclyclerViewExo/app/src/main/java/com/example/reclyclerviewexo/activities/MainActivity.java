@@ -73,8 +73,10 @@ public class MainActivity extends AppCompatActivity {
     public void insertMemo(View v) throws FileNotFoundException {
         NoteDTO n = new NoteDTO(myInput.getText().toString());
 
-        listNotes.add(n);
-        NotesDatabaseHelper.getDatabase(v.getContext()).noteDAO().insert(n);
+        if (n.intitule.length()>0) {
+            listNotes.add(n);
+            NotesDatabaseHelper.getDatabase(v.getContext()).noteDAO().insert(n);
+        }
 
         noteAdapter.notifyItemInserted(listNotes.size());
         myInput.setText("");
