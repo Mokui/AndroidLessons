@@ -30,7 +30,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "montag";
-    private static final String INTENT_FILTER = "com.formationandroid.notificationspush.SUPER_INTENT";
+    public static final String INTENT_FILTER = "com.formationandroid.notificationspush.SUPER_INTENT";
 
     private TextView myMsg;
     private EditText msgToSend;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         // paramètres :
         RequestParams requestParams = new RequestParams();
         requestParams.put("message", toSend);
-        requestParams.put("tokenPush", "eKImvbwcT2qqTs7BPdGGeN:APA91bEm71jW2z7myd3Acg1ZdoVCyLbjrchOc-pchHgZLB-_-_KiZpy02i8XVic1oxemC5eWurNuGh-HieUtQR2S8O9XSBxg_-RBlhaVThyUZFLiV73YD_UpaKbrFhprKWQW6BrjZ2yS");
+        requestParams.put("tokenPush", "fzPHHL5UQqWlakzNiNSBhq:APA91bGP1FB2_XZqp-5Vg7q2lCQgbOArdY4qug_AY7k48p2BBdr8V6j5iA9dtBPio_Q-eL3TUy5h5JLPx8MPiZ_gxxEHU3HObIfnnx2OAB0xFELAgiJK7WlmKpSgkXxwz8mZtAs5uzmh");
         // appel :
         client.post("http://s519716619.onlinehome.fr/exercices/push/envoyer_message_expediteur.php", requestParams, new AsyncHttpResponseHandler() {
                     @Override
@@ -77,12 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        //Broadcast
-        Intent intent = new Intent();
-        intent.putExtra("mymsg", toSend);
-        intent.setAction(INTENT_FILTER);
         msgToSend.setText("");
-        sendBroadcast(intent);
     }
 
     @Override
