@@ -26,6 +26,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onNewToken(@NonNull String topic) {
         super.onNewToken(topic);
+        Log.i(TAG,topic);
         //METTRE LES SHAREDPREF ICI
     }
 }
