@@ -17,9 +17,10 @@ import androidx.lifecycle.MutableLiveData;
 import cz.msebera.android.httpclient.Header;
 
 public class MainRepository {
-    private static final String TAG = "mytag";
+    private static final String TAGWBS = "-ERROR WEBSERVICE-";
 
-    public void getLiveDataItem(final MutableLiveData<Item> liveDataItem) {
+    public void getLiveDataItem(final MutableLiveData<Item> liveDataItem, final MutableLiveData<Boolean> liveDataSpinner) {
+        liveDataSpinner.setValue(true);
         //Données
         int random = new Random().nextInt((60-1)+1)+1;
         String url = "https://swapi.dev/api/planets/"+random+"?format=json";
@@ -52,17 +53,17 @@ public class MainRepository {
                                     +"\nGravité:\t "+gravity
                                     +"\nTerrain:\t "+sol);
                     liveDataItem.setValue(item);
+                    liveDataSpinner.setValue(false);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
                 //String retour = new String(response); //Version simple
-
             }
             @Override
             public void onFailure(int statusCode, Header[] headers,
                                   byte[] errorResponse, Throwable e)
             {
-                Log.e(TAG, e.toString());
+                Log.e(TAGWBS, e.toString());
             }
         });
     }

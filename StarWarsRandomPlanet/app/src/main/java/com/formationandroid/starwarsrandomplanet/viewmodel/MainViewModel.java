@@ -16,6 +16,9 @@ public class MainViewModel extends ViewModel {
     private MainRepository mainRepository;
     // LiveData item :
     private MutableLiveData<Item> liveDataItem;
+
+    private MutableLiveData<Boolean> liveDataSpinner;
+
     // Initialisation :
     public void init(MainRepository mainRepository)
     {
@@ -27,14 +30,19 @@ public class MainViewModel extends ViewModel {
         // initialisation et premier chargement :
         this.mainRepository = mainRepository;
         liveDataItem = new MutableLiveData<>();
-        mainRepository.getLiveDataItem(liveDataItem);
+        liveDataSpinner = new MutableLiveData<>();
+        mainRepository.getLiveDataItem(liveDataItem, liveDataSpinner);
     }
 
     public LiveData<Item> getLiveDataItem() {
         return liveDataItem;
     }
 
+    public LiveData<Boolean> getLiveDataSpinner() {
+        return liveDataSpinner;
+    }
+
     public void clicRandomViewModel(View view){
-        mainRepository.getLiveDataItem(liveDataItem);
+        mainRepository.getLiveDataItem(liveDataItem, liveDataSpinner);
     }
 }
