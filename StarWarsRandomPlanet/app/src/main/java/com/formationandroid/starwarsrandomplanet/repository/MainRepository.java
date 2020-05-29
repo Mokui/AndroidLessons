@@ -1,8 +1,11 @@
 package com.formationandroid.starwarsrandomplanet.repository;
 
+import android.content.Context;
 import android.util.Log;
 
+import com.formationandroid.starwarsrandomplanet.DIApplication;
 import com.formationandroid.starwarsrandomplanet.model.Item;
+import com.formationandroid.starwarsrandomplanet.model.dao.ExempleDAO;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -13,14 +16,26 @@ import org.json.JSONObject;
 
 import java.util.Random;
 
+import javax.inject.Inject;
+
 import androidx.lifecycle.MutableLiveData;
 import cz.msebera.android.httpclient.Header;
 
 public class MainRepository {
-    private static final String TAGWBS = "-ERROR WEBSERVICE-";
+    private static final String TAGWBS = "TAG-ERROR WEBSERVICE-";
+    private static final String TAG = "TAG";
+    //Injections:
+    @Inject ExempleDAO exempleDAO;
+    @Inject Context applicationContext;
+
+    public MainRepository() {
+        Log.v(TAG, "MAIN REPOSITORY CREATED");
+        DIApplication.getAppComponent().inject(this);
+    }
 
     public void getLiveDataItem(final MutableLiveData<Item> liveDataItem, final MutableLiveData<Boolean> liveDataSpinner) {
         liveDataSpinner.setValue(true);
+
         //Données
         int random = new Random().nextInt((60-1)+1)+1;
         String url = "https://swapi.dev/api/planets/"+random+"?format=json";

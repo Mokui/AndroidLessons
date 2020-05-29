@@ -10,7 +10,9 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.formationandroid.starwarsrandomplanet.DIApplication;
 import com.formationandroid.starwarsrandomplanet.R;
+import com.formationandroid.starwarsrandomplanet.di.MainComponent;
 import com.formationandroid.starwarsrandomplanet.model.Item;
 import com.formationandroid.starwarsrandomplanet.repository.MainRepository;
 import com.formationandroid.starwarsrandomplanet.viewmodel.MainViewModel;
@@ -22,11 +24,16 @@ public class MainActivity extends AppCompatActivity {
     private MainViewModel mainViewModel;
     private TextView monTextView;
     private ProgressBar monSpinner;
+    private MainComponent mainComponent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Inject MainRepository in MainActivity
+        mainComponent = DIApplication.getAppComponent().mainComponent().create();
+        mainComponent.inject(this);
+
         monTextView = findViewById(R.id.mytxt);
         monSpinner = findViewById(R.id.progress_bar);
 
@@ -53,5 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void clicRandom(View view){
         mainViewModel.clicRandomViewModel(view);
+    }
+
+    public MainComponent getMainComponent() {
+        return mainComponent;
     }
 }
