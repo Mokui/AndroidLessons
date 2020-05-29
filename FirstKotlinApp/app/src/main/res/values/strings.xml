@@ -2,4 +2,6 @@
     <string name="app_name">FirstKotlinApp</string>
     <string name="proposez_un_calcul">Proposez un calcul: add, diff, mult, div…</string>
     <string name="calculer">Calculer</string>
+    <string name="next">Next</string>
+    <string name="previous">PREVIOUS</string>
 </resources>
