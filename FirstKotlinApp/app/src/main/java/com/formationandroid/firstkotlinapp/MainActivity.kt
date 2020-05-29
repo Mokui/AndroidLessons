@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getPreviousCommand() {
-        if(commandes.isNotEmpty() && commandes.size > 1){
+        if(commandes.isNotEmpty() && commandes.size > 1 && index > 0){
             index--
             havePrevious = true
             editText.setText(commandes[index].show())
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getNextCommand() {
-        if(havePrevious || commandes.size>=(index+1)){
+        if(havePrevious &&  index < commandes.size - 1){
             index++
             editText.setText(commandes[index].show())
         }
