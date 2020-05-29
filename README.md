@@ -45,3 +45,6 @@ TP n°17 sur les tests intrumentaux, unitaires et UI (et un systrace)
 
 ## Projet PushNotif
 TP n°19 Firebase
+
+## Projet StarWarsRandomPlanet
+TP  n°20 à 22 Sur Architecture MVVM, DataBinding et l'Injection de dépendances
