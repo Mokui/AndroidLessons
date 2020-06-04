@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PremierNumberKotlin</string>
+    <string name="entrer_un_nombre">Entrer un nombre</string>
+    <string name="valider">Valider</string>
+</resources>
